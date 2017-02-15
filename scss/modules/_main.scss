@@ -1,0 +1,33 @@
+body {
+    background-color: peachpuff;
+}
+
+
+
+
+//Media queries - Tablet Layout: 768px
+@media only screen and (min-width: 768px) {
+    body {
+        background-color: tan;
+    }
+}
+
+
+
+
+//Media queries - small Desktop: 1280px
+@media only screen and (min-width: 1280px) {
+    body {
+        background-color: lightcoral;
+    }
+}
+
+
+
+
+//Media queries - large Desktop: 1920px
+@media only screen and (min-width: 1920px) {
+    body {
+        background-color: sienna;
+    }
+}
