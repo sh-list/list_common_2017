@@ -1,0 +1,56 @@
+/*@mixin reset {
+    background-color: tomato;
+    color: darkslategray;
+
+    li {
+        font-size: 8px;
+    }
+
+    footer {
+        background-color: lightsalmon;
+        box-sizing: border-box;
+        font-family: 'glegooregular', 'georgia', serif;
+        //font-family: 'robotoregular', 'arial', sans-serif !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+            margin: 0;
+            padding: 0;
+        }
+
+        *:hover {
+            transition: .3s ease-in;
+        }
+
+        ul, ol, li, a {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+*/
+
+@mixin reset {
+    background-color: cadetblue;
+    color: sienna;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    :before, :after {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+    }
+
+    *:hover {
+        transition: .3s ease-in;
+    }
+
+    ul, ol, li, a {
+        margin: 0;
+        padding: 0;
+    }
+}

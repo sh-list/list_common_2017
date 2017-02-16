@@ -1,0 +1,49 @@
+/* --------------------------------------------------------------
+   Colours
+-------------------------------------------------------------- */
+$primary-color: rgb(52, 57, 74);
+$footer-text: rgb(212, 214, 224);
+$footer-hover: rgb(131, 190, 148);
+$border-color: mix(linen, rgb(131, 190, 148), 50%);
+
+
+
+
+/* --------------------------------------------------------------
+   Fonts
+-------------------------------------------------------------- */
+@font-face {
+  font-family: 'listicons';
+  src:  url('/assets/fonts/listicons.eot');
+  src:  url('/assets/fonts/listicons.eot') format('embedded-opentype'),
+    url('/assets/fonts/listicons.ttf') format('truetype'),
+    url('/assets/fonts/listicons.woff') format('woff'),
+    url('/assets/fonts/listicons.woff2') format('woff2'),
+    url('/assets/fonts/listicons.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('/assets/fonts/roboto-regular-webfont.eot');
+    src: url('/assets/fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('/assets/fonts/roboto-regular-webfont.woff') format('woff'),
+         url('/assets/fonts/roboto-regular-webfont.ttf') format('truetype'),
+         url('/assets/fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'glegooregular';
+    src: url('/assets/fonts/glegoo-regular-webfont.eot');
+    src: url('/assets/fonts/glegoo-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/glegoo-regular-webfont.woff2') format('woff2'),
+         url('/assets/fonts/glegoo-regular-webfont.woff') format('woff'),
+         url('/assets/fonts/glegoo-regular-webfont.ttf') format('truetype'),
+         url('/assets/fonts/glegoo-regular-webfont.svg#glegooregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
