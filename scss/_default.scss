@@ -14,36 +14,36 @@ $border-color: mix(linen, rgb(131, 190, 148), 50%);
 -------------------------------------------------------------- */
 @font-face {
   font-family: 'listicons';
-  src:  url('/assets/fonts/listicons.eot');
-  src:  url('/assets/fonts/listicons.eot') format('embedded-opentype'),
-    url('/assets/fonts/listicons.ttf') format('truetype'),
-    url('/assets/fonts/listicons.woff') format('woff'),
-    url('/assets/fonts/listicons.woff2') format('woff2'),
-    url('/assets/fonts/listicons.svg') format('svg');
+  src:  url('/assets/fonts/listicons.eot?20170224');
+  src:  url('/assets/fonts/listicons.eot?20170224#iefix') format('embedded-opentype'),
+    url('/assets/fonts/listicons.ttf?20170224') format('truetype'),
+    url('/assets/fonts/listicons.woff?20170224') format('woff'),
+    url('/assets/fonts/listicons.woff2?20170224') format('woff2'),
+    url('/assets/fonts/listicons.svg?20170224#listicons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
     font-family: 'robotoregular';
-    src: url('/assets/fonts/roboto-regular-webfont.eot');
-    src: url('/assets/fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/roboto-regular-webfont.woff2') format('woff2'),
-         url('/assets/fonts/roboto-regular-webfont.woff') format('woff'),
-         url('/assets/fonts/roboto-regular-webfont.ttf') format('truetype'),
-         url('/assets/fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+    src: url('/assets/fonts/roboto-regular-webfont.eot?20170224');
+    src: url('/assets/fonts/roboto-regular-webfont.eot?20170224#iefix') format('embedded-opentype'),
+         url('/assets/fonts/roboto-regular-webfont.woff2?20170224') format('woff2'),
+         url('/assets/fonts/roboto-regular-webfont.woff?20170224') format('woff'),
+         url('/assets/fonts/roboto-regular-webfont.ttf?20170224') format('truetype'),
+         url('/assets/fonts/roboto-regular-webfont.svg?20170224#robotoregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'glegooregular';
-    src: url('/assets/fonts/glegoo-regular-webfont.eot');
-    src: url('/assets/fonts/glegoo-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/glegoo-regular-webfont.woff2') format('woff2'),
-         url('/assets/fonts/glegoo-regular-webfont.woff') format('woff'),
-         url('/assets/fonts/glegoo-regular-webfont.ttf') format('truetype'),
-         url('/assets/fonts/glegoo-regular-webfont.svg#glegooregular') format('svg');
+    src: url('/assets/fonts/glegoo-regular-webfont.eot?20170224');
+    src: url('/assets/fonts/glegoo-regular-webfont.eot?20170224#iefix') format('embedded-opentype'),
+         url('/assets/fonts/glegoo-regular-webfont.woff2?20170224') format('woff2'),
+         url('/assets/fonts/glegoo-regular-webfont.woff?20170224') format('woff'),
+         url('/assets/fonts/glegoo-regular-webfont.ttf?20170224') format('truetype'),
+         url('/assets/fonts/glegoo-regular-webfont.svg?20170224#glegooregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
