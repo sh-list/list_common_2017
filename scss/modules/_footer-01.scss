@@ -124,6 +124,10 @@
                 }
             }
         }
+
+        .footer__col abbr {
+            border: none;
+        }
     }
 
     .legal__bar__wrapper {
@@ -148,6 +152,10 @@
                         color: $footer-hover;
                     }
                 }
+            }
+
+            span abbr {
+                border: none;
             }
         }
     }
