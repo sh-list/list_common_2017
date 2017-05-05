@@ -1,6 +1,8 @@
 .social-share-section {
     background-color: none;
     height: 70px;
+    max-width: 520px;
+    margin: 0 auto;
     margin-bottom: 0.5em;
 
     span {
@@ -21,7 +23,7 @@
         content: ' ';
         position: absolute;
         top: 10px;
-        width: 75px;
+        width: calc(33% - 10px);
         height: 1px;
     }
 
@@ -41,8 +43,12 @@
             flex-direction: row;
             justify-content: space-around;
             margin: 0;
-            padding: 0 30px;
+            padding: 0 15vw;
             list-style: none outside none;
+
+            li a {
+                outline: 0;    /* to turn off Firefox dotted outline */
+            }
 
             li {
 
@@ -54,6 +60,46 @@
                         transition: .2s ease-in;
                     }
                 }
+            }
+        }
+    }
+}
+
+
+
+
+//Media queries - Tablet Layout: 768px
+@media only screen and (min-width: 768px) {
+    .social-share-section {
+
+        span:before, span:after {
+            width: 75px;
+        }
+
+        .icons-set-wrapper {
+
+            ul {
+                padding: 0 30px;
+            }
+        }
+    }
+}
+
+
+
+
+//Media queries - small Desktop: 1280px
+@media only screen and (min-width: 1280px) {
+    .social-share-section {
+
+        span:before, span:after {
+            width: 75px;
+        }
+
+        .icons-set-wrapper {
+
+            ul {
+                padding: 0 30px;
             }
         }
     }

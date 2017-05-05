@@ -60,6 +60,9 @@ gulp.task('build/admin', function(){
     ];
 
     var lessStream = gulp.src('/Volumes/sites/less/awe-less/www/screen.less')
+    // var lessStream = gulp.src(['/Volumes/sites/less/awe-less/food/screen.less'])
+    // var lessStream = gulp.src(['/Volumes/sites/less/dev-less/film/screen.less'])
+    // var lessStream = gulp.src(['/Volumes/sites/less/awe-less/edinburghfestival/screen.less'])
     .pipe(less());
 
     var scssStream = gulp.src('./scss/**/*.scss')
@@ -73,8 +76,10 @@ gulp.task('build/admin', function(){
 
     .pipe(postcss(processors))
 
-    .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/www'))
-    // .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/www')); // compile last to rectify skewing of styles caused by processing of other files
+    // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/food'));
+    // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/film'));
+    // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/edinburghfestival'));
 
     return mergedStream
 
