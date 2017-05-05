@@ -1,19 +1,36 @@
 .social-share-section {
-    background-color: blanchedalmond;
-    display: block;
-    margin-bottom: 3em;
-    height: 50px;
+    background-color: none;
+    height: 70px;
+    margin-bottom: 0.5em;
 
     span {
-        background-color: rgba(tomato, 0.5);
-        color: snow;
+        color: crimson;
+        position: relative;
         display: block;
         width: 100%;
-        margin-bottom: 0.5em;
+        height: calc(20px + 0.5em);
+        margin: 0 auto;
         font-family: 'glegooregular', 'georgia', serif;
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 0.05em;
+    }
+
+    span:before, span:after {
+        background-color: crimson;
+        content: ' ';
+        position: absolute;
+        top: 10px;
+        width: 75px;
+        height: 1px;
+    }
+
+    span:before {
+        left: 0;
+    }
+
+    span:after {
+        right: 0;
     }
 
     .icons-set-wrapper {
