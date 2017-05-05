@@ -1,0 +1,43 @@
+.social-share-section {
+    background-color: blanchedalmond;
+    display: block;
+    margin-bottom: 3em;
+    height: 50px;
+
+    span {
+        background-color: rgba(tomato, 0.5);
+        color: snow;
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5em;
+        font-family: 'glegooregular', 'georgia', serif;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .icons-set-wrapper {
+        margin: auto 0;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0 30px;
+            list-style: none outside none;
+
+            li {
+
+                .social-icon-svg {
+                    fill: crimson;
+
+                    &:hover {
+                        fill: tomato;
+                        transition: .2s ease-in;
+                    }
+                }
+            }
+        }
+    }
+}
