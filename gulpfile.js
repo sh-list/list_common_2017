@@ -1,103 +1,80 @@
-// have simpLESS compiler running in conjunction with gulp !important
+// MUST have simpLESS compiler running in conjunction with gulp
 
 var gulp = require('gulp'),
     less = require('gulp-less'),
     sass = require('gulp-sass'),
     postcss = require('gulp-postcss'),
-    rucksack = require('gulp-rucksack'),
-    // sourcemaps = require('gulp-sourcemaps'),
+    rucksack = require('gulp-rucksack')
+    plumber = require('gulp-plumber'),
     concat = require('gulp-concat'),
     cssnano = require('cssnano'),
     lost = require('lost'),
     merge = require('merge-stream'),
-    browsersync = require('browser-sync').create();
+    browsersync = require('browser-sync');
 
 
-gulp.task('browser-sync', function(){
-    browsersync.init({
-        proxy: "http://dev.www.list.co.uk/"
+    // Browser-sync serve task
+    gulp.task('browser-sync', function(){
+        browsersync.init({
+            proxy: 'https://dev.www.list.co.uk/'
+        });
     });
-});
 
 
-gulp.task('sass', function(){
+// SASS compilation task
+gulp.task('sass', function() {
     var processors = [
-            cssnano({discardUnused: false}),
-            lost()
+        cssnano({discardUnused: false}),
+        lost()
     ];
 
+    // compile single SASS file of choice
     return gulp.src('./scss/**/*.{scss, sass}')
 
-    // .pipe(sourcemaps.init())
-
-    .pipe(sass().on('error', sass.logError))
-
+    .pipe(plumber())
+    .pipe(sass())
     .pipe(rucksack({autoprefixer: true}))
-
     .pipe(postcss(processors))
 
-    // .pipe(sourcemaps.write('./maps'))
-
     .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/www'))
-    // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/food'))
-    // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/film'))
-    // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/edinburghfestival'))
-    // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/www')) /* for update form page */
-    // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/archive')) /* for archive */
-
     .pipe(gulp.dest('./css'))
 
     .pipe(browsersync.reload({stream: true}));
 });
 
 
-gulp.task('less', function(){
+// LESS task
+gulp.task('less', function() {
     return gulp.src('/Volumes/sites/less/awe-less/www/screen.less')
-    // return gulp.src('/Volumes/sites/less/awe-less/food/screen.less')
-    // return gulp.src('/Volumes/sites/less/dev-less/film/screen.less')
-    // return gulp.src('/Volumes/sites/less/awe-less/edinburghfestival/screen.less')
-    // return gulp.src('/Volumes/sites/less/awe-less/update/update.less') /* for update form page */
-    // return gulp.src('/Volumes/sites/less/awe-less/archive_07_03/screen.less') /* for archive */
-
-    // .pipe(sourcemaps.init())
 
     .pipe(less()).on('error', console.error.bind(console))
-
-    // .pipe(sourcemaps.write('./maps'))
 
     .pipe(browsersync.reload({stream: true}));
 });
 
 
+// LESS file merge task
 gulp.task('build/admin', function(){
     var processors = [
-            cssnano({discardUnused: false}),
+        cssnano({discardUnused: false})
     ];
 
-    var lessStream = gulp.src(['/Volumes/sites/less/awe-less/www/screen.less'])
-    // var lessStream = gulp.src(['/Volumes/sites/less/awe-less/food/screen.less'])
-    // var lessStream = gulp.src(['/Volumes/sites/less/dev-less/film/screen.less'])
-    // var lessStream = gulp.src(['/Volumes/sites/less/awe-less/edinburghfestival/screen.less'])
-    // var lessStream = gulp.src(['/Volumes/sites/less/awe-less/update/update.less']) /* for update form page */
-    // var lessStream = gulp.src(['/Volumes/sites/less/awe-less/archive_07_03/screen.less']) /* for archive */
+    var lessStream = gulp.src('/Volumes/sites/less/awe-less/www/screen.less')
     .pipe(less());
 
-    var scssStream = gulp.src(['./scss/**/*.scss'])
+    var scssStream = gulp.src('./scss/**/*.scss')
     .pipe(sass());
 
-    var cssStream = gulp.src(['./css/**/*.css'])
-    .pipe(concat('css-files.css'));
+    var cssStream = gulp.src('./css/**/*.css')
+    .pipe(concat('css-files.css'))
 
     var mergedStream = merge(lessStream, scssStream, cssStream)
     .pipe(concat('screen.css'))
-    // .pipe(concat('update.css')) /* for update form page */
+
     .pipe(postcss(processors))
-    .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/www'));
-    // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/food'));
-    // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/film'));
-    // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/edinburghfestival'));
-    // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/www')); /* for update form page */
-    // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/archive')); /* for archive */
+
+    .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/www'))
+    // .pipe(gulp.dest('./css'));
 
     return mergedStream
 
@@ -105,7 +82,8 @@ gulp.task('build/admin', function(){
 });
 
 
-gulp.task('watch', ['browser-sync'], function(){
+// GULP watch task
+gulp.task('watch', function(){
     gulp.watch('./scss/**/*.scss', ['sass']);
     gulp.watch('./scss/**/*.scss', ['build/admin']);
     gulp.watch('/Volumes/sites/less/awe-less/**/*.less', ['build/admin']).on('change', browsersync.reload);
