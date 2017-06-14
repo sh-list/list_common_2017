@@ -1,0 +1,50 @@
+.certificate {
+    background-repeat: no-repeat;
+    background-color: transparent;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    margin: 0.5em 0;
+    border-color: transparent;
+}
+
+.certificate em {
+    opacity: 0;
+}
+
+.certificate.cert-15 {
+    background-image: url("/assets/img/common/icons-svg/cert_15.svg");
+}
+
+.certificate.cert-18 {
+    background-image: url("/assets/img/common/icons-svg/cert_18.svg");
+}
+
+.certificate.cert-12a {
+    background-image: url("/assets/img/common/icons-svg/cert_12a.svg");
+}
+
+.certificate.cert-12 {
+    background-image: url("/assets/img/common/icons-svg/cert_12.svg");
+}
+
+.certificate.cert-pg {
+    background-image: url("/assets/img/common/icons-svg/cert_pg.svg");
+    width: 2.75em;
+    height: 2.75em;
+    margin-top: -0.5em;
+}
+
+.certificate.cert-u {
+    background-image: url("/assets/img/common/icons-svg/cert_u.svg");
+    width: 2.75em;
+    height: 2.75em;
+    margin-top: -0.5em;
+}
+
+.certificate.cert-e {
+    background-image: url("/assets/img/common/icons-svg/cert_e.svg");
+    width: 2.75em;
+    height: 2.75em;
+    margin-top: -0.5em;
+}

@@ -1,0 +1,50 @@
+.social-share-wrapper {
+    // position: relative;
+    display: flex;
+    justify-content: center;
+    margin: $base-font-size 0 ($base-font-size * 1.5) 0;
+    // border-top: 1px solid rgba(crimson, 0.2);
+    border-width: 1px 0 1px;
+    border-style: solid;
+    border-color: $border-rules-color;
+    text-align: center;
+
+    div {
+        background-color: white;
+        color: crimson;
+        // width: 150px;
+        // height: 20px;
+        margin: auto 0;
+        // margin-top: -10px;
+        font-family: 'glegooregular', 'georgia', serif;
+        font-size: 0.95em;
+        letter-spacing: 0.01em;
+        line-height: 1.4em;
+        text-transform: uppercase;
+    }
+
+    ul {
+        display: flex;
+        // justify-content: center;
+        margin: auto 0;    // override default ul + ol styling
+        padding: ($base-font-size / 2) 0 ($base-font-size / 2) 0;
+        list-style: none outside none;
+
+        li {
+            margin: 0 ($base-font-size / 2.5);
+
+            a {
+                display: flex;
+
+                svg {
+                    fill: crimson
+                }
+            }
+        }
+
+        li a svg:hover {
+            fill: tomato;
+            transition: .2s ease-in;
+        }
+    }
+}

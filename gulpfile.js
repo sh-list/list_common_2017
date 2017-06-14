@@ -29,7 +29,7 @@ gulp.task('sass', function() {
     ];
 
     // compile single SASS file of choice
-    return gulp.src('./scss/**/*.{scss, sass}')
+    gulp.src('./scss/**/*.{scss, sass}')
 
     .pipe(plumber())
     .pipe(sass())
@@ -63,6 +63,7 @@ gulp.task('build/admin', function(){
     // var lessStream = gulp.src(['/Volumes/sites/less/awe-less/food/screen.less'])
     // var lessStream = gulp.src(['/Volumes/sites/less/dev-less/film/screen.less'])
     // var lessStream = gulp.src(['/Volumes/sites/less/awe-less/edinburghfestival/screen.less'])
+    // var lessStream = gulp.src(['/Volumes/sites/less/awe-less/admin/preview.less'])  // ADMIN
     .pipe(less());
 
     var scssStream = gulp.src('./scss/**/*.scss')
@@ -73,6 +74,7 @@ gulp.task('build/admin', function(){
 
     var mergedStream = merge(lessStream, scssStream, cssStream)
     .pipe(concat('screen.css'))
+    // .pipe(concat('preview.css'))  // ADMIN
 
     .pipe(postcss(processors))
 
@@ -80,6 +82,7 @@ gulp.task('build/admin', function(){
     // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/food'));
     // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/film'));
     // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/edinburghfestival'));
+    // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/admin'));  // ADMIN
 
     return mergedStream
 
