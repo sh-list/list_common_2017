@@ -1,0 +1,53 @@
+.article-credits {
+    // background-color: lightseagreen;
+    display: flex;
+    justify-content: space-between;
+    // height: 50px;
+    min-height: 50px;
+    margin: $base-font-size 0 ($base-font-size * 1.5) 0;
+    padding: 0;
+    list-style: none outside none;
+    border-width: 1px 0 1px;
+    border-style: solid;
+    border-color: $border-rules-color;
+
+    li {
+        margin: auto 0;
+    }
+}
+
+.article-credits-multiple {
+    // background-color: tan;
+
+    li:first-child {
+        // background-color: rgba(lightcoral, 0.6);
+        width: 55%;
+        padding: 0.65em 0;
+    }
+}
+
+
+
+
+//Media queries - Tablet: 768px and above
+@media only screen and (min-width: 768px) {
+    .article-credits-multiple {
+
+        li:first-child {
+            width: 70%;
+        }
+    }
+}
+
+
+
+
+//Media queries - small Desktop: 1280px
+// @media only screen and (min-width: 1280px) {
+//     .article-credits-multiple {
+//
+//         li:first-child {
+//             width: 70%;
+//         }
+//     }
+// }
