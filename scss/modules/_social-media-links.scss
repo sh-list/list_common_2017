@@ -1,106 +1,50 @@
-.social-share-section {
-    background-color: none;
-    height: 70px;
-    max-width: 520px;
-    margin: 0 auto;
-    margin-bottom: 0.5em;
+.social-share-wrapper {
+    // position: relative;
+    display: flex;
+    justify-content: center;
+    margin: $base-font-size 0 ($base-font-size * 1.5) 0;
+    // border-top: 1px solid rgba(crimson, 0.2);
+    border-width: 1px 0 1px;
+    border-style: solid;
+    border-color: $border-rules-color;
+    text-align: center;
 
-    span {
+    div {
+        background-color: white;
         color: crimson;
-        position: relative;
-        display: block;
-        width: 100%;
-        height: calc(20px + 0.5em);
-        margin: 0 auto;
-        font-family: 'glegooregular', 'georgia', serif;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-    }
-
-    span:before, span:after {
-        background-color: crimson;
-        content: ' ';
-        position: absolute;
-        top: 10px;
-        width: calc(33% - 10px);
-        height: 1px;
-    }
-
-    span:before {
-        left: 0;
-    }
-
-    span:after {
-        right: 0;
-    }
-
-    .icons-set-wrapper {
+        // width: 150px;
+        // height: 20px;
         margin: auto 0;
+        // margin-top: -10px;
+        font-family: 'glegooregular', 'georgia', serif;
+        font-size: 0.95em;
+        letter-spacing: 0.01em;
+        line-height: 1.4em;
+        text-transform: uppercase;
+    }
 
-        ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            margin: 0;
-            padding: 0 15vw;
-            list-style: none outside none;
+    ul {
+        display: flex;
+        // justify-content: center;
+        margin: auto 0;    // override default ul + ol styling
+        padding: ($base-font-size / 2) 0 ($base-font-size / 2) 0;
+        list-style: none outside none;
 
-            li a {
-                outline: 0;    /* to turn off Firefox dotted outline */
-            }
+        li {
+            margin: 0 ($base-font-size / 2.5);
 
-            li {
+            a {
+                display: flex;
 
-                .social-icon-svg {
-                    fill: crimson;
-
-                    &:hover {
-                        fill: tomato;
-                        transition: .2s ease-in;
-                    }
+                svg {
+                    fill: crimson
                 }
             }
         }
-    }
-}
 
-
-
-
-//Media queries - Tablet Layout: 768px
-@media only screen and (min-width: 768px) {
-    .social-share-section {
-
-        span:before, span:after {
-            width: 75px;
-        }
-
-        .icons-set-wrapper {
-
-            ul {
-                padding: 0 30px;
-            }
-        }
-    }
-}
-
-
-
-
-//Media queries - small Desktop: 1280px
-@media only screen and (min-width: 1280px) {
-    .social-share-section {
-
-        span:before, span:after {
-            width: 75px;
-        }
-
-        .icons-set-wrapper {
-
-            ul {
-                padding: 0 30px;
-            }
+        li a svg:hover {
+            fill: tomato;
+            transition: .2s ease-in;
         }
     }
 }
