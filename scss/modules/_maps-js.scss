@@ -1,0 +1,53 @@
+.js-map-styles {
+    // background-color: plum;
+    margin: 2em 0;
+
+    #article-map {
+        margin-bottom: $base-font-size;
+        border: 1px solid rgba(darkslategray, 0.2);
+    }
+
+    table {
+        // background-color: thistle;
+        // border: 1px solid violet;
+
+        tbody {
+            border-top: 1px solid #e1e9ec;
+
+            tr {
+                border-bottom: 1px solid #e1e9ec;
+
+                td:first-child {
+                    background-color: #b65496;
+                    color: snow;
+                    width: 32px;
+                    padding: 2px;
+                    font-family: 'georgia';
+                    font-size: 1.25em;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+
+                td:not(:first-child) {
+                    padding: 0.5em 0 0.5em 1em;
+
+                    a {
+                        color: #b65496;
+                        font-size: 1.2em;
+                        font-weight: bold;
+                        letter-spacing: 0.005em;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: #cf95bc;
+                        }
+                    }
+                }
+            }
+
+            tr:nth-child(2n) td:last-child {
+                background-color: white;
+            }
+        }
+    }
+}
