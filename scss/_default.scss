@@ -1,7 +1,23 @@
 /* --------------------------------------------------------------
+   Rucksack aliases
+-------------------------------------------------------------- */
+@alias {
+    ff: font-family;
+    fs: font-size;
+    fw: font-weight;
+    mxw: max-width;
+    ls: list-style;
+    op: opacity;
+}
+
+
+
+
+/* --------------------------------------------------------------
    Font variables
 -------------------------------------------------------------- */
 $base-font-size: 16px;
+$body-font: 'robotoregular', 'helvetica', 'arial', sans-serif;
 
 
 
