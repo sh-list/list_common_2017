@@ -1,0 +1,72 @@
+article > form {
+    background-color: rgba(mediumpurple, 0.2);
+    padding: 1em;
+    border-radius: 0.3em;
+    text-align: center;
+
+    fieldset {
+        // background-color: tomato;
+        margin-top: -0.25em;
+        border: none;
+
+        label {
+            color: rgba(indigo, 0.65);
+            letter-spacing: 0.01em;
+
+            strong {
+                display: block;
+                padding-bottom: 0.5em;
+            }
+
+            input {
+                width: calc(100% - (80px + 2.5em));
+                height: 35px;
+                padding: 0 1em;
+                border: none;
+            }
+        }
+
+        button {
+            background-color: rgba(indigo, 0.65);
+            color: snow;
+            width: 80px;
+            height: 35px;
+            border: none;
+            font-size: $base-font-size * .65;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: indigo;
+            }
+        }
+    }
+}
+
+
+
+
+//Media queries - Tablet Layout: 768px
+@media only screen and (min-width: 768px) {
+    article > form {
+        padding: 0.5em;
+
+        fieldset {
+            margin-top: 0;
+
+            label {
+
+                strong {
+                    display: inline;
+                    padding-bottom: 0;
+                    vertical-align: middle;
+                }
+
+                input {
+                    width: 40%;
+                    margin-left: 1em;
+                }
+            }
+        }
+    }
+}

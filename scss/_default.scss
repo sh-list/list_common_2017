@@ -22,25 +22,25 @@ $border-rules-color: #d5d8d8;
    Fonts
 -------------------------------------------------------------- */
 @font-face {
-  font-family: 'listicons';
-  src:  url('/assets/fonts/listicons.eot?20170224');
-  src:  url('/assets/fonts/listicons.eot?20170224#iefix') format('embedded-opentype'),
-    url('/assets/fonts/listicons.ttf?20170224') format('truetype'),
-    url('/assets/fonts/listicons.woff?20170224') format('woff'),
-    url('/assets/fonts/listicons.woff2?20170224') format('woff2'),
-    url('/assets/fonts/listicons.svg?20170224#listicons') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'listicons';
+    src:  url('/assets/fonts/listicons.eot?20170224');
+    src:  url('/assets/fonts/listicons.eot?20170224#iefix') format('embedded-opentype'),
+        url('/assets/fonts/listicons.ttf?20170224') format('truetype'),
+        url('/assets/fonts/listicons.woff?20170224') format('woff'),
+        url('/assets/fonts/listicons.woff2?20170224') format('woff2'),
+        url('/assets/fonts/listicons.svg?20170224#listicons') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'robotoregular';
     src: url('/assets/fonts/roboto-regular-webfont.eot?20170224');
     src: url('/assets/fonts/roboto-regular-webfont.eot?20170224#iefix') format('embedded-opentype'),
-         url('/assets/fonts/roboto-regular-webfont.woff2?20170224') format('woff2'),
-         url('/assets/fonts/roboto-regular-webfont.woff?20170224') format('woff'),
-         url('/assets/fonts/roboto-regular-webfont.ttf?20170224') format('truetype'),
-         url('/assets/fonts/roboto-regular-webfont.svg?20170224#robotoregular') format('svg');
+        url('/assets/fonts/roboto-regular-webfont.woff2?20170224') format('woff2'),
+        url('/assets/fonts/roboto-regular-webfont.woff?20170224') format('woff'),
+        url('/assets/fonts/roboto-regular-webfont.ttf?20170224') format('truetype'),
+        url('/assets/fonts/roboto-regular-webfont.svg?20170224#robotoregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -49,10 +49,10 @@ $border-rules-color: #d5d8d8;
     font-family: 'glegooregular';
     src: url('/assets/fonts/glegoo-regular-webfont.eot?20170224');
     src: url('/assets/fonts/glegoo-regular-webfont.eot?20170224#iefix') format('embedded-opentype'),
-         url('/assets/fonts/glegoo-regular-webfont.woff2?20170224') format('woff2'),
-         url('/assets/fonts/glegoo-regular-webfont.woff?20170224') format('woff'),
-         url('/assets/fonts/glegoo-regular-webfont.ttf?20170224') format('truetype'),
-         url('/assets/fonts/glegoo-regular-webfont.svg?20170224#glegooregular') format('svg');
+        url('/assets/fonts/glegoo-regular-webfont.woff2?20170224') format('woff2'),
+        url('/assets/fonts/glegoo-regular-webfont.woff?20170224') format('woff'),
+        url('/assets/fonts/glegoo-regular-webfont.ttf?20170224') format('truetype'),
+        url('/assets/fonts/glegoo-regular-webfont.svg?20170224#glegooregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
