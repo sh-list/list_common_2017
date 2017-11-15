@@ -1,3 +1,24 @@
+$step: 1;
+$darken-color: mediumseagreen;
+$fade-color: mediumseagreen;
+
+$start-color: blanchedalmond;
+$end-color: mediumseagreen;
+
+@while $step <=10 {
+    .rating-squares div:nth-child(#{$step}) {
+        // background-color: darken($darken-color, ($step * 3%));
+        // background-color: transparentize($fade-color, (($step * .019) * 5));
+        background-color: mix($end-color, $start-color, ($step * 10));
+        // background-color: rgba($fade-color, ($step * .125));
+    }
+
+    $step: $step + 1;
+}
+
+
+
+
 .list-rating {
     // background-color: lightcoral;
     width: 50vw;
@@ -45,13 +66,14 @@
             }
 
             .rating-squares {
+                // background-color: rgba(cornflowerblue, 0.4);
                 display: grid;
                 grid-template-columns: repeat(10, 1fr);
-                grid-column-gap: 2px;
+                grid-column-gap: 0;
                 justify-content: space-between;
 
                 div {
-                    background-color: mediumseagreen;
+                    // background-color: mediumseagreen;
                     width: auto;
                     height: 16px;
                 }
@@ -74,7 +96,7 @@
 //Media queries - Tablet Layout: 768px
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .list-rating {
-        background-color: khaki;
+        // background-color: khaki;
         width: 50%;
     }
 }
@@ -85,7 +107,7 @@
 //Media queries - large Desktop Layout: 960px+
 @media only screen and (min-width: 960px) {
     .list-rating {
-        background-color: lavender;
+        // background-color: lavender;
         width: 260px;
     }
 }
