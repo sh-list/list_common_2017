@@ -18,6 +18,7 @@
 -------------------------------------------------------------- */
 $base-font-size: 16px;
 $body-font: 'robotoregular', 'helvetica', 'arial', sans-serif;
+$body-bold-font: 'robotomedium', 'helvetica-bold', 'arial', sans-serif;
 
 
 
@@ -57,6 +58,18 @@ $border-rules-color: #d5d8d8;
         url('/assets/fonts/roboto-regular-webfont.woff?20170224') format('woff'),
         url('/assets/fonts/roboto-regular-webfont.ttf?20170224') format('truetype'),
         url('/assets/fonts/roboto-regular-webfont.svg?20170224#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('/assets/fonts/roboto-medium-webfont.eot?20170224');
+    src: url('/assets/fonts/roboto-medium-webfont.eot?20170224#iefix') format('embedded-opentype'),
+         url('/assets/fonts/roboto-medium-webfont.woff2?20170224') format('woff2'),
+         url('/assets/fonts/roboto-medium-webfont.woff?20170224') format('woff'),
+         url('/assets/fonts/roboto-medium-webfont.ttf?20170224') format('truetype'),
+         url('/assets/fonts/roboto-medium-webfont.svg?20170224#robotoregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
