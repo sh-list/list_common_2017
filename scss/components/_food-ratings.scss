@@ -21,7 +21,9 @@ $end-color: mediumseagreen;
 .ratings-container {
     display: grid;
     grid-template-columns: auto 1fr;
+    grid-column-gap: 1em;
     align-items: center;
+    margin-bottom: $base-font-size * 1.5;
 
     .list-rating {
         // background-color: lightcoral;
@@ -120,12 +122,13 @@ $end-color: mediumseagreen;
     .highLow {
         // background-color: rgba(blanchedalmond, 0.4);
         margin: 0;
-        padding-left: 2em;
+        padding-left: 1em;
         ls: none outside none;
         ff: $body-font;
+        // border-left: 1px solid darkslategray;
 
         li {
-            fs: 105%;
+            fs: 100%;
 
             strong {
                 // background-color: rgba(blanchedalmond, 0.4);
@@ -151,7 +154,7 @@ $end-color: mediumseagreen;
         }
 
         .highLow li {
-            // fs: 105%;
+            fs: 105%;
         }
     }
 }
