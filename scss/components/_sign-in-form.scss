@@ -1,0 +1,266 @@
+.form-container {
+    @include reset;    // counters default List 62.5% html resizing factor from mobile up to desktop
+    background-color: $form-bgrnd-color;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
+    min-width: 90vw;
+    padding: $base-font-size;
+    border-radius: $base-font-size / 2;
+    box-shadow: 0px 0px 40px -10px silver, 0px 0px 1px 0px rgba(dimgray, 0.2);
+
+    h3 {
+        fs: 150%;
+        line-height: 1.2;
+    }
+
+    fieldset, legend {
+        width: 100%;
+
+        legend {
+            color: $form-heading;
+            margin-bottom: $base-font-size;
+            padding-bottom: $base-font-size / 2;
+            ff: $body-bold-font;
+            line-height: 1.5;
+            border-bottom: 1px solid $form-heading;
+        }
+    }
+
+    .list-login {
+
+        div {
+            position: relative;
+            margin: 0;    // counters default List div margin CSS rule @ .commentSignIn div
+        }
+
+        div > input:not([name="rating"]) {
+            color: dimgray;
+            width: 100%;
+            padding: 6px 24px;
+            fs: 120%;
+        }
+
+        div > input:focus {
+            color: $form-heading-highlight;
+        }
+
+        div > label:not([for="remember"]) {
+            position: absolute;
+            top: 0;
+            left: 24px;
+            // line-height: 2.5;
+            line-height: 2.85;
+            op: 0.6;
+            transition: all 0.3s ease 0s;
+        }
+
+        .actions {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-column-gap: $base-font-size;
+
+            button[type="submit"] {
+                background-color: $form-heading;
+                color: snow;
+                margin: 0;
+                ff: $body-bold-font;
+                fs: 105%;
+                text-transform: uppercase;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $form-heading-highlight;
+                }
+            }
+
+            .remember {
+                align-self: center;
+                fs: 85%;
+
+                input[type="checkbox"] {
+                    position: absolute;
+                    left: -9999px;
+                }
+
+                label {
+                    position: relative;
+                    padding: 0 $base-font-size * 1.25;
+                    cursor: pointer;
+                }
+            }
+
+            label:before {
+                background-color: snow;
+                content: ' ';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 16px;
+                height: 16px;
+                border: 2px solid $form-heading;
+                border-radius: 50%;
+            }
+
+            input:checked + label:before {
+                background-color: $form-heading-highlight;
+                border-color: $form-heading-highlight;
+            }
+        }
+    }
+
+    .social-login {
+        // background-color: plum;
+
+        .social-login-links {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(auto, 140px));
+            grid-column-gap: $base-font-size;
+            justify-content: space-between;
+            margin: 0;    // counters default List div margin CSS rule @ .commentSignIn div
+
+            a.sign-in-google, a.sign-in-facebook {
+                background-color: snow;
+                display: inline-grid;
+                grid-template-columns: auto 1fr;
+                grid-gap: 8px;
+                align-items: center;
+                height: 40px;
+                padding-left: 4px;
+                border-radius: 20px;
+                text-decoration: none;
+
+                span {
+                    color: dimgray;
+                    ff: $body-bold-font;
+                }
+            }
+
+            a.sign-in-google svg {
+                fill: $google-red;
+            }
+
+            a.sign-in-google:hover {
+                background-color: $google-red;
+
+                svg, span {
+                    color: snow;
+                    fill: snow;
+                }
+            }
+
+            a.sign-in-facebook svg {
+                fill: $facebook-blue;
+            }
+
+            a.sign-in-facebook:hover {
+                background-color: $facebook-blue;
+
+                svg, span {
+                    color: snow;
+                    fill: snow;
+                    // transition: none;
+                }
+            }
+        }
+    }
+
+    .register {
+        ff: $body-bold-font;
+        fs: 95%;
+        margin: 0;    // counters default List div margin CSS rule @ .commentSignIn div
+        padding-top: $base-font-size / 2;
+        border-top: 1px solid $form-heading;
+
+        #registration a, a {
+            color: $form-heading;
+
+            &:hover {
+                color: $form-heading-highlight;
+                text-decoration: underline;
+            }
+        }
+
+        .password-prompt {
+            fs: 85%;
+        }
+    }
+}
+
+.form-container input:focus ~ label:not([for="remember"]) {
+    color: $form-heading;
+    padding-left: $base-font-size / 1.5;
+}
+
+.form-container input:valid ~ label:not([for="remember"]) {
+    color: transparent;
+    display: none;
+}
+
+
+
+
+//Media queries - small Mobile (under 375px)
+@media only screen and (max-width: 374px) {
+    .form-container {
+
+        .social-login {
+
+            .social-login-links {
+                grid-template-columns: repeat(2, minmax(auto, 125px));
+
+                a.sign-in-google, a.sign-in-facebook {
+                    // color: tomato;
+                    grid-gap: 6px;
+                    // fs: 90%;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+//Media queries - small Mobile (landscape)
+@media only screen and (max-width: 650px) and (orientation: landscape) {
+    .form-container {
+        // min-width: 80vw;
+
+        .social-login {
+            // background-color: burlywood;
+
+            .social-login-links {
+                justify-content: start;
+            }
+        }
+    }
+}
+
+
+
+
+//Media queries - Mobile (landscape) + Tablet Layout (768px) and larger
+@media only screen and (min-width: 650px) {
+    .form-container {
+        grid-template-columns: 1fr 25%;
+        min-width: 620px;
+        padding: $base-font-size * 1.5;
+
+        h3 {
+            grid-column-end: span 2;
+        }
+
+        .social-login {
+
+            .social-login-links {
+                grid-template-columns: 1fr;
+                grid-gap: 16px;
+            }
+        }
+
+        .register {
+            grid-column-end: span 2;
+        }
+    }
+}

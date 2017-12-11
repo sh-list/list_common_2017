@@ -11,6 +11,10 @@
 
     *:hover {
         transition: .2s ease-in;
+
+        .social-login-links > a, svg, span {
+            transition: none;
+        }
     }
 
     ul, ol, li, a {

@@ -1,0 +1,27 @@
+.form-container {
+    color: dimgray;
+    ff: $body-font;
+
+    h1, h2, h3 {
+        color: $form-heading;
+        ff: $heading-font;
+    }
+
+    input, button {
+        height: 40px;
+        margin-bottom: $base-font-size;
+        outline: 0;
+        border: 0;
+        border-radius: 20px;
+
+        &:required {
+            box-shadow: none;
+        }
+
+        &:focus {
+            outline: 0;
+            border: 0;
+            box-shadow: 0 0 10px -1px $form-heading-highlight;
+        }
+    }
+}

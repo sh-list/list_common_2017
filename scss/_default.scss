@@ -1,7 +1,26 @@
 /* --------------------------------------------------------------
+   Rucksack aliases
+-------------------------------------------------------------- */
+@alias {
+    ff: font-family;
+    fs: font-size;
+    fw: font-weight;
+    mxw: max-width;
+    ls: list-style;
+    op: opacity;
+}
+
+
+
+
+/* --------------------------------------------------------------
    Font variables
 -------------------------------------------------------------- */
 $base-font-size: 16px;
+$body-font: 'robotoregular', 'helvetica', 'arial', sans-serif;
+$body-bold-font: 'robotomedium', 'helvetica-bold', 'arial', sans-serif;
+$body-extra-bold: 'robotobold', 'helvetica-bold', 'arial', sans-serif;
+$heading-font: 'glegoobold', 'georgia', serif;
 
 
 
@@ -14,6 +33,15 @@ $footer-text: rgb(212, 214, 224);
 $footer-hover: rgb(131, 190, 148);
 $border-color: mix(linen, rgb(131, 190, 148), 50%);
 $border-rules-color: #d5d8d8;
+
+/* sign-in + comment + rating form */
+$form-bgrnd-color: rgba(178, 239, 225, 0.6);
+$form-heading: #2662ce;
+$form-heading-highlight: saturate(cornflowerblue, 20%);
+
+/* social media */
+$facebook-blue: #3b5998;
+$google-red: #dd4b39;
 
 
 
@@ -46,6 +74,18 @@ $border-rules-color: #d5d8d8;
 }
 
 @font-face {
+    font-family: 'robotomedium';
+    src: url('/assets/fonts/roboto-medium-webfont.eot?20170224');
+    src: url('/assets/fonts/roboto-medium-webfont.eot?20170224#iefix') format('embedded-opentype'),
+         url('/assets/fonts/roboto-medium-webfont.woff2?20170224') format('woff2'),
+         url('/assets/fonts/roboto-medium-webfont.woff?20170224') format('woff'),
+         url('/assets/fonts/roboto-medium-webfont.ttf?20170224') format('truetype'),
+         url('/assets/fonts/roboto-medium-webfont.svg?20170224#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'glegooregular';
     src: url('/assets/fonts/glegoo-regular-webfont.eot?20170224');
     src: url('/assets/fonts/glegoo-regular-webfont.eot?20170224#iefix') format('embedded-opentype'),
@@ -53,6 +93,18 @@ $border-rules-color: #d5d8d8;
         url('/assets/fonts/glegoo-regular-webfont.woff?20170224') format('woff'),
         url('/assets/fonts/glegoo-regular-webfont.ttf?20170224') format('truetype'),
         url('/assets/fonts/glegoo-regular-webfont.svg?20170224#glegooregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'glegoobold';
+    src: url('/assets/fonts/glegoo-bold-webfont.eot?20170224');
+    src: url('/assets/fonts/glegoo-bold-webfont.eot?20170224#iefix') format('embedded-opentype'),
+         url('/assets/fonts/glegoo-bold-webfont.woff2?20170224') format('woff2'),
+         url('/assets/fonts/glegoo-bold-webfont.woff?20170224') format('woff'),
+         url('/assets/fonts/glegoo-bold-webfont.ttf?20170224') format('truetype'),
+         url('/assets/fonts/glegoo-bold-webfont.svg?20170224#glegoobold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
