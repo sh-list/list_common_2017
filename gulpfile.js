@@ -16,8 +16,9 @@ var gulp = require('gulp'),
     // Browser-sync serve task
     gulp.task('browser-sync', function(){
         browsersync.init({
-            proxy: 'http://dev.www.list.co.uk/'
+            // proxy: 'http://dev.www.list.co.uk/'
             // proxy: 'http://dev.edinburghfestival.list.co.uk/'
+            proxy: 'http://dev.film.list.co.uk'
         });
     });
 
@@ -60,13 +61,14 @@ gulp.task('build/admin', function(){
         cssnano({discardUnused: false})
     ];
 
-    var lessStream = gulp.src('/Volumes/sites/less/awe-less/www/screen.less')
+    // var lessStream = gulp.src('/Volumes/sites/less/awe-less/www/screen.less')
     // var lessStream = gulp.src(['/Volumes/sites/less/awe-less/food/screen.less'])
-    // var lessStream = gulp.src(['/Volumes/sites/less/dev-less/film/screen.less'])
+    var lessStream = gulp.src(['/Volumes/sites/less/dev-less/film/screen.less'])
     // var lessStream = gulp.src(['/Volumes/sites/less/awe-less/edinburghfestival/screen.less'])
     // var lessStream = gulp.src(['/Volumes/sites/less/awe-less/update/update.less'])   // UPDATE form page
     // var lessStream = gulp.src(['/Volumes/sites/less/awe-less/archive_07_03/screen.less'])   // ARCHIVE
     // var lessStream = gulp.src(['/Volumes/sites/less/awe-less/admin/preview.less'])  // ADMIN
+    // var lessStream = gulp.src(['/Volumes/sites/less/awe-less/members/members.less'])  // MEMBERS
     .pipe(less());
 
     var scssStream = gulp.src('./scss/**/*.scss')
@@ -79,16 +81,18 @@ gulp.task('build/admin', function(){
     .pipe(concat('screen.css'))
     // .pipe(concat('update.css')) // UPDATE form page
     // .pipe(concat('preview.css'))  // ADMIN
+    // .pipe(concat('members.css')) // MEMBERS
 
     .pipe(postcss(processors))
 
-    .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/www')); // compile last to rectify skewing of styles caused by processing of other files
+    // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/www')); // compile last to rectify skewing of styles caused by processing of other files
     // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/food'));
-    // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/film'));
+    .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/film'));
     // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/edinburghfestival'));
     // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/www'));    // UPDATE form page
     // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/archive'));    // ARCHIVE
     // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/admin'));  // ADMIN
+    // .pipe(gulp.dest('/Volumes/sites/files.list.co.uk/assets/css/www'));  // MEMBERS
 
     return mergedStream
 

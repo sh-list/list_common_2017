@@ -1,0 +1,108 @@
+// overrides for styles set in legacy LESS files for main site, members and update sections
+
+.emailUpdateInfo {
+    // background-color: darkseagreen;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .emailUpdateIntro {
+        @include reset;
+        margin: 0 0 $base-font-size 0;
+        padding: $base-font-size;
+    }
+}
+
+.main > .form-container {
+    // background-color: mediumseagreen;
+    width: 95vw;
+    margin-bottom: $base-font-size * 2;
+}
+
+.offerLogin {
+    // background: salmon;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.commentSignIn {
+    position: relative;
+
+    a.cancel {
+        background-color: firebrick;
+        color: snow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 18px;
+        right: 16px;
+        width: 20px;
+        height: 20px;
+        fs: $base-font-size * 1.25;
+        // line-height: 1.05;
+        z-index: 10;
+
+        &:hover {
+            background-color: lighten(firebrick, 10%);
+        }
+    }
+}
+
+
+
+
+//Media queries - small Mobile (under 375px)
+@media only screen and (max-width: 374px) {
+    .emailUpdateInfo {
+        // background-color: lightcoral;
+    }
+}
+
+
+
+
+//Media queries - small Mobile (landscape)
+@media only screen and (max-width: 650px) and (orientation: landscape) {
+    .emailUpdateInfo {
+        // background-color: peachpuff;
+    }
+}
+
+
+
+
+//Media queries - Mobile (landscape) + Tablet Layout (768px) and larger
+@media only screen and (min-width: 650px) {
+    .emailUpdateInfo {
+        // background-color: indianred;
+
+        .emailUpdateIntro {
+            width: 50%;
+            padding: $base-font-size * 1.5;
+        }
+    }
+
+    .commentSignIn {
+        max-width: 620px;
+
+        a.cancel {
+            // background-color: mediumturquoise;
+            top: 26px;
+        }
+    }
+}
+
+
+
+
+// Media queries - Desktop Layout (1024px) and larger
+@media only screen and (min-width: 1024px) {
+    .emailUpdateInfo {
+        // background-color: tomato;
+    }
+
+    .main > .form-container {
+        float: left;
+        margin-right: $base-font-size * 2;
+    }
+}
