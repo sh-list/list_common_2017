@@ -1,0 +1,50 @@
+.commentSignIn {
+    position: relative;
+
+    a.cancel {
+        background-color: firebrick;
+        color: snow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 18px;
+        right: 16px;
+        width: 20px;
+        height: 20px;
+        fs: $base-font-size * 1.25;
+        // line-height: 1.05;
+        z-index: 10;
+
+        &:hover {
+            background-color: lighten(firebrick, 10%);
+        }
+    }
+}
+
+
+
+
+//Media queries - Mobile (landscape) + Tablet Layout (768px) and larger
+@media only screen and (min-width: 650px) and (max-width: 992px) {
+    .commentSignIn {
+        max-width: 620px;
+
+        a.cancel {
+            // background-color: mediumturquoise;
+            top: 26px;
+        }
+    }
+
+    .commentSignIn > .form-container {
+        // background-color: darkolivegreen;
+        grid-template-columns: 1fr 30%;
+
+        .social-login {
+
+            .social-login-links a {
+                grid-gap: 6px;
+            }
+        }
+    }
+}

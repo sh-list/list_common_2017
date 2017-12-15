@@ -7,10 +7,12 @@
 @import 'components/film-ratings';
 @import 'components/article-forms';
 @import 'components/sign-in-form';
+@import 'components/comment-form';
 
 @import 'modules/article-byline';
 @import 'modules/forms-main';
-@import 'modules/comments-overrides';
+@import 'modules/sign-in-overrides';     // disable this stylesheet when uploading to List film domain
+// @import 'modules/sign-in-film-override';
 @import 'modules/social-media-links';
 @import 'modules/maps-js';
 @import 'modules/footer-01';

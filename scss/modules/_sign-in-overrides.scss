@@ -90,6 +90,10 @@
             top: 26px;
         }
     }
+
+    .commentSignIn > .form-container {
+        grid-template-columns: 1fr 25%;
+    }
 }
 
 
