@@ -192,7 +192,12 @@
     padding-left: $base-font-size / 1.5;
 }
 
-.form-container input:valid ~ label:not([for="remember"]) {
+// .form-container input:valid ~ label:not([for="remember"]) {
+//     color: transparent;
+//     display: none;
+// }
+
+.form-container input:focus ~ label:not([for="remember"]) {
     color: transparent;
     display: none;
 }
