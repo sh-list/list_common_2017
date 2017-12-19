@@ -95,6 +95,33 @@
                         background-color: $form-heading-highlight;
                     }
                 }
+
+                button[value="Post"] {
+                    background-color: darkcyan;
+                    margin-top: $base-font-size;
+
+                    &:hover {
+                        background-color: lighten(darkcyan, 7.5%);
+                        // background-color: rgb(131, 190, 148);
+                    }
+                }
+            }
+        }
+
+        #display-username {
+            background-color: rgba(cornflowerblue, 0.2);
+            display: flex;
+            align-items: center;
+            height: 40px;
+            border-radius: 20px;
+            margin-bottom: $base-font-size;
+
+            span {
+                color: $form-heading;
+                padding-left: 24px;
+                ff: $body-bold-font;
+                fs: 120%;
+                line-height: 2.9;
             }
         }
     }
@@ -139,6 +166,10 @@
                 .actions {
                     width: 50%;
                 }
+            }
+
+            #display-username {
+                width: 75%;
             }
         }
     }

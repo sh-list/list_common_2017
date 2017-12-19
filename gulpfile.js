@@ -16,8 +16,8 @@ var gulp = require('gulp'),
     // Browser-sync serve task
     gulp.task('browser-sync', function(){
         browsersync.init({
-            // proxy: 'http://dev.www.list.co.uk/'
-            proxy: 'http://dev.food.list.co.uk'
+            proxy: 'http://dev.www.list.co.uk/'
+            // proxy: 'http://dev.food.list.co.uk'
             // proxy: 'http://dev.edinburghfestival.list.co.uk/'
             // proxy: 'http://dev.film.list.co.uk'
         });

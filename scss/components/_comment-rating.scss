@@ -54,6 +54,10 @@
 
     input[type="radio"]:checked ~ label:hover:before {
         color: darken($form-bgrnd-color, 5%);
+
+        @media screen and (max-width: 1024px) {
+            color: $form-heading;
+        }
     }
 }
 
