@@ -1,8 +1,8 @@
-.commentSignIn {
+.commentSignIn, .report-comment-container {
     position: relative;
 
     a.cancel {
-        background-color: firebrick;
+        background-color: lighten(crimson, 8%);
         color: snow;
         display: flex;
         justify-content: center;
@@ -17,9 +17,98 @@
         z-index: 10;
 
         &:hover {
-            background-color: lighten(firebrick, 10%);
+            background-color: darken(crimson, 5%);
         }
     }
+}
+
+.report-comment-container {
+    margin-bottom: $base-font-size * 1.25;
+
+    .form-container {
+
+        .report-form {
+
+            fieldset {
+                display: grid;
+
+                p {
+                    color: dimgray;
+                    margin-bottom: $base-font-size / 2;
+                    line-height: 1.6;
+
+                    a {
+                        color: $form-heading;
+
+                        &:hover {
+                            color: $form-heading-highlight;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                .reporting-section {
+                    // background-color: indianred;
+                    position: relative;
+                    margin: $base-font-size 0 $base-font-size * 1.5 0;
+
+                    textarea {
+                        width: 100%;
+                        padding: 12px 24px;
+                        fs: 120%;
+                        border: none;
+                        border-radius: 4px;
+
+                        &:required {
+                            box-shadow: none;
+                        }
+
+                        &:focus {
+                            color: $form-heading-highlight;
+                            outline: none;
+                            border: none;
+                            box-shadow: 0 0 10px -1px $form-heading-highlight;
+                        }
+                    }
+
+                    label[for="reporting-section"] {
+                        position: absolute;
+                        top: 0;
+                        left: 24px;
+                        line-height: 3;
+                        op: 0.6;
+                        transition: all 0.3s ease 0s;
+                    }
+                }
+
+                button[value="Report"] {
+                    background-color: lighten(crimson, 8%);
+                    color: snow;
+                    width: 70%;
+                    margin: auto;
+                    ff: $body-bold-font;
+                    fs: 105%;
+                    letter-spacing: 0.01em;
+                    text-transform: uppercase;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: darken(crimson, 5%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.report-comment-container textarea:focus ~ label[for="reporting-section"] {
+    color: $form-heading;
+    padding-left: $base-font-size / 1.5;
+}
+
+.report-comment-container textarea:valid ~ label[for="reporting-section"] {
+    color: transparent;
+    display: none;
 }
 
 
@@ -27,7 +116,7 @@
 
 //Media queries - Mobile (landscape) + Tablet Layout (768px) and larger
 @media only screen and (min-width: 650px) and (max-width: 992px) {
-    .commentSignIn {
+    .commentSignIn, .report-comment-container {
         max-width: 620px;
 
         a.cancel {
@@ -44,6 +133,22 @@
 
             .social-login-links a {
                 grid-gap: 6px;
+            }
+        }
+    }
+
+    .report-comment-container > .form-container {
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-row-gap: 24px;
+
+        .report-form {
+
+            fieldset {
+
+                button[value="Report"] {
+                    width: 50%;
+                }
             }
         }
     }
